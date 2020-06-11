@@ -1,0 +1,169 @@
+.login, .pass-restore, .pass-restore2, .pass-restore3, .pass-restore4, .email-submit, .email-submit2 {
+  position: relative;
+  padding-top: 1rem;
+  border: 1px solid $black;
+}
+.to_back {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+}
+.main {
+  width: 676px;
+  margin: 3rem auto;
+  box-shadow: 0px 5.5px 5px rgba(0, 0, 0, 0.24),
+    0px 9px 18px rgba(0, 0, 0, 0.18);
+  padding: 4rem 7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  @include afs(26px, 26px, 24px, 16px);
+  color: $black;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.method {
+  text-transform: uppercase;
+  display: flex;
+  font-weight: 300;
+  cursor: pi;
+  div {
+    padding: 0.125rem 0.5rem;
+  }
+  .active {
+    font-weight: 500;
+    border-bottom: 2px solid $main;
+    color: $main;
+  }
+}
+.btn {
+  &-enter {
+    background-color: $main;
+    color: $white;
+    padding: 1rem 0rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    @include afs(18px, 18px, 14px);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+}
+input {
+  margin-bottom: 2rem;
+  @include afs(16px, 16px, 14px);
+  color: $grey_dark;
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid $grey_light;
+}
+input::placeholder{
+  color: $grey_light;
+}
+.input-icon {
+  position: relative;
+  img {
+    position: absolute;
+    right: 0.5rem;
+    top: 1rem;
+    width: 24px;
+  }
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  .social_item {
+    @include size(48px);
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+/*адаптация*/
+@include mq($TableWidth, max) {
+  .main {
+    box-shadow: none;
+    width: 100%;
+  }
+}
+
+@include mq($PhoneWidth, max) {
+  .main {
+    padding: 2rem 1rem;
+  }
+}
+
+@include mq($SmPhoneWidth, max) {
+  .main {
+    position: relative;
+    padding: 2rem 1rem;
+    margin: 0px;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+
+  .title {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+  }
+
+  .window {
+    order: 3;
+    margin-bottom: 0px;
+    margin-top: 2rem;
+  }
+
+  .footer {
+    order: 2;
+  }
+ 
+}
+/*адаптация*/
+
+/*общие стили */
+.l-h{
+  line-height: 30px;
+}
+.border-elem{
+  border-bottom: 2px solid $main;
+}
+/*общие стили */
+
+
+/*pass-restore3*/
+.refresh-password{
+  display: flex;
+  justify-content: center;
+  input{
+    border-bottom: 2px solid $grey_light;
+    width: 63px;
+    margin-right: 1.8rem;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+/*pass-restore*/
+
+/*Email submit*/
+.email-submit{
+  .main{
+          padding: 4rem 6rem;
+  }
+}
+/*Email submit*/
